@@ -15,4 +15,6 @@ spec:
   destination:
     server: {{ $root.Values.config.cluster }}
     namespace: {{ $root.Values.config.namespace }}
+  syncPolicy:
+    automated: {}
 {{- end }}
