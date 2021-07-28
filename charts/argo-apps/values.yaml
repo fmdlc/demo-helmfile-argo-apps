@@ -10,4 +10,4 @@ config:
   gitlab_url: https://github.com/fmdlc/
 
 applications:
-  - flask-app
+  - ekoparty-flask-app

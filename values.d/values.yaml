@@ -4,5 +4,6 @@ config:
   cluster: https://kubernetes.default.svc
   project: default
   targetRevision: HEAD
+
 applications:
-  - flask-app
+  - ekoparty-flask-app

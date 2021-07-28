@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: argocd-cm
+  name: argocd-cm-repository
   namespace: argocd
   labels:
     app.kubernetes.io/name: argocd-cm
