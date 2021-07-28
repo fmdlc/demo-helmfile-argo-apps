@@ -1,0 +1,8 @@
+config:
+  namespace: default
+  baseUrl: https://github.com/fmdlc/
+  cluster: https://kubernetes.default.svc
+  project: default
+  targetRevision: HEAD
+applications:
+  - flask-app

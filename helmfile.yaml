@@ -1,0 +1,14 @@
+---
+releases:
+  - name: "argo-apps"
+    chart: ./charts/argo-apps
+    atomic: true
+    namespace: "default"
+    createNamespace: true
+    installed: true
+    labels:
+      name: argocd
+    version: 0.1.0
+    values:
+      - ./values.d/values.yaml
+    missingFileHandler: Warn

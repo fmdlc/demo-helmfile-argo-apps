@@ -1,0 +1,20 @@
+{{- $root := . -}}
+{{- range .Values.applications }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  namespace: argocd
+  name: {{ . }}
+spec:
+  project: {{ $root.Values.config.project }}
+  source:
+    targetRevision: {{ $root.Values.config.targetRevision }}
+    repoURL: "{{ $root.Values.config.baseUrl }}{{ . }}.git"
+    path: helm/{{ . }}
+  destination:
+    server: {{ $root.Values.config.cluster }}
+    namespace: {{ $root.Values.config.namespace }}
+
+{{- end }}
+

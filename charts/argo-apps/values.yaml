@@ -1,0 +1,13 @@
+# This is a YAML-formatted file.
+# ts=2
+
+config:
+  namespace: default
+  baseUrl:
+  cluster: https://kubernetes.default.svc
+  project: default
+  targetRevision: HEAD
+  gitlab_url: https://github.com/fmdlc/
+
+applications:
+  - flask-app
