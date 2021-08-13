@@ -11,7 +11,7 @@ spec:
   source:
     targetRevision: {{ $root.Values.config.targetRevision }}
     repoURL: "{{ $root.Values.config.baseUrl }}{{ . }}.git"
-    path: helm/{{ . | trimPrefix "ekoparty-" }}
+    path: helm/{{ . | trimPrefix "demo-" }}
   destination:
     server: {{ $root.Values.config.cluster }}
     namespace: {{ $root.Values.config.namespace }}

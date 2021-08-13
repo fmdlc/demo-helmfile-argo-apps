@@ -9,4 +9,4 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   repositories: |
-    - url: https://github.com/fmdlc/ekoparty-flask-app
+    - url: https://github.com/fmdlc/demo-flask-app
