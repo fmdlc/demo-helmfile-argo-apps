@@ -6,4 +6,4 @@ config:
   targetRevision: HEAD
 
 applications:
-  - ekoparty-flask-app
+  - demo-flask-app
