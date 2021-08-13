@@ -7,4 +7,4 @@ config:
 
 applications:
   - demo-flask-app
-  - demo-hello-world-app
+# - demo-hello-world-app
