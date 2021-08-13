@@ -9,5 +9,18 @@ config:
   targetRevision: HEAD
   gitlab_url: https://github.com/fmdlc/
 
+sync:
+  enabled: true
+  prune: true
+  selfHeal: true
+  allowEmpty: false
+  createNamespace: true
+  retry:
+    limit: 5
+    backoff_duration: 5s
+    backoff_factor: 2
+    backoff_maxDuration: 3m
+
 applications:
-  - ekoparty-flask-app
+  - demo-flask-app
+

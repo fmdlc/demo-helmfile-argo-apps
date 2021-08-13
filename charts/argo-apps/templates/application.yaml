@@ -16,5 +16,22 @@ spec:
     server: {{ $root.Values.config.cluster }}
     namespace: {{ $root.Values.config.namespace }}
   syncPolicy:
-    automated: {}
+    prune: {{ $root.Values.sync.prune }}
+    selfHeal: {{ $root.Values.sync.selfHeal }}
+    allowEmpty: {{ $root.Values.sync.allowEmpty }}
+  {{- if $root.Values.sync.enabled }}
+  syncPolicy:
+    automated:
+      prune: {{ $root.Values.sync.prune }}
+      selfHeal: {{ $root.Values.sync.selfHeal }}
+      allowEmpty: {{ $root.Values.sync.allowEmpty }}
+    syncOptions:
+    - CreateNamespace={{- $root.Values.sync.createNamespace }}
+    retry:
+      limit: {{ $root.Values.sync.retry.limit }}
+      backoff:
+        duration: {{ $root.Values.sync.retry.backoff_duration }}
+        factor: {{ $root.Values.sync.retry.backoff_factor }}
+        maxDuration: {{ $root.Values.sync.retry.backoff_maxDuration }}
+  {{ end }}
 {{- end }}
