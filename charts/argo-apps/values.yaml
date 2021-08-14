@@ -23,4 +23,5 @@ sync:
 
 applications:
   - demo-flask-app
+  - demo-hello-world-app
 
