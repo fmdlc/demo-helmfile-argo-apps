@@ -35,7 +35,7 @@ jobs:
           helmfile template
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name "demo-cluster"
+          aws eks update-kubeconfig --name "gitops-dev"
       - name: 'Helmfile diff'
         run: |
           helmfile diff --suppress-secrets
@@ -64,7 +64,7 @@ jobs:
           helmfile template
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name "demo-cluster"
+          aws eks update-kubeconfig --name "gitops-dev"
       - name: 'Helmfile diff'
         run: |
           helmfile diff --suppress-secrets
